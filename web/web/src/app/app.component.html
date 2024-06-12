@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Liczba kursów: {{kursy.length}}</h2>
+
+  <ol>
+    <li *ngFor="let kurs of kursy">{{kurs}}</li>
+  </ol>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nazwa">Imię i nazwisko:</label>
+      <input type="text" id="imie" [(ngModel)]="nazwa" name="imie" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="numerKursu">Numer Kursu:</label>
+      <input type="number" id="numer" [(ngModel)]="numerKursu" name="numerK" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Zapisz do kursu</button>
+  </form>
+</div>
